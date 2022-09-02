@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evenning</title>
+  <style>
+    .body {
+        background-color: darksalmon;
+    }
+    .body__title {
+        color: white;
+    }
+  </style>
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="shortcut icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_corazón.svg/1200px-Heart_corazón.svg.png"
+    type="image/x-icon">
+</head>
+
+<body class="body">
+  <article class="hero">
+    <h1 class="hero__title">Just to remind you that I miss you.
+
+        Are you having a good time? </h1>
+    <figure class="hero__image-container">
+      <img
+        src="2764.png"
+        alt="Imagen del amor" class="hero__image"
+    </figure>
+    <button id="heroButtonSi" class="hero__button">Si</button>
+    <button id="heroButtonNo" class="hero__button">No</button>
+  </article>
+
+
+  <script>
+  const documentReady = () => {
+    const heroTitle = document.querySelector('.hero__title');
+    const heroButtonSi = document.getElementById('heroButtonSi');
+    const heroButtonNo = document.querySelector('#heroButtonNo');
+  
+    const MeHacesBien = () => {
+      alert('MeHacesBien');
+      alert('Gracias');
+      location.href = 'https://www.youtube.com/watch?v=S0PHR2H0b1A';
+    };
+  
+    const evitarKCRompanMyBobo = () => {
+      heroButtonNo.style.position = 'absolute';
+      heroButtonNo.style.top = (Math.random() * window.innerHeight) + 'px';
+      heroButtonNo.style.left = (Math.random() * window.innerWidth) + 'px';
+    };
+  
+   
+    heroButtonSi.addEventListener('click', MeHacesBien);
+    heroButtonNo.addEventListener('mouseover', evitarKCRompanMyBobo);
+  };
+  
+  document.addEventListener('DOMContentLoaded', documentReady);
+</script>
+</body>
+
+</html>
